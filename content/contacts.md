@@ -28,22 +28,22 @@ menu:
 #         color: '#e24d0e'
 ---
 
-# ARRL ARES - Osceola County
+## ARRL ARES - Osceola County
 
 | Callsign | Name | Email | Position |
 | :------: | ---- | ----- | -------- |
-| N4ZIQ | Joe Reilly | <n4ziq@n4ziq.com> | Emergency Coordinator |
-| KJ4PNA | John Chapman | <chiefjchapman@bellsouth.net> | AEC - Recruiting & Training |
-| K9YAP | Randy Fox | <K9YAP@thefoxden.com> | AEC - Technical |
-| K9YAP | Randy Fox | <K9YAP@thefoxden.com> | Webmaster |
-| N4ZZG | William Burchfield | <bbur@property-appraiser.org> | Net Control Manager |
+| {{< qrz N4ZIQ >}} | Joe Reilly | <n4ziq@n4ziq.com> | Emergency Coordinator |
+| {{< qrz KJ4PNA >}} | John Chapman | <chiefjchapman@bellsouth.net> | AEC - Recruiting & Training |
+| {{< qrz K9YAP >}} | Randy Fox | <K9YAP@thefoxden.com> | AEC - Technical |
+| {{< qrz K9YAP >}} | Randy Fox | <K9YAP@thefoxden.com> | Webmaster |
+| {{< qrz N4ZZG >}} | William Burchfield | <bbur@property-appraiser.org> | Net Control Manager |
 
-# Osceola ARES
+## Osceola ARES
 
 | Callsign | Name | Email | Position |
 | :------: | ---- | ----- | -------- |
-| KO4POJ | Luis "Lou" Corrales | <KO4POJ@gmail.com> | President |
+| {{< qrz KO4POJ >}} | Luis "Lou" Corrales | <KO4POJ@gmail.com> | President |
 | | | | Vice President |
-| KQ4AFY | Jeremy T. Bouse | <operator@KQ4AFY.xyz> | Treasurer |
+| {{< qrz KQ4AFY >}} | Jeremy T. Bouse | <operator@KQ4AFY.xyz> | Treasurer |
 | | | | Secretary |
-| N4ZZG | William Burchfield | <bbur@property-appraiser.org> | Manager |
+| {{< qrz N4ZZG >}} | William Burchfield | <bbur@property-appraiser.org> | Manager |

@@ -1,0 +1,20 @@
+main:
+  # - identifier: blog
+  #   name: Blog
+  #   weight: 4
+  #   params:
+  #     icon:
+  #       vendor: fas
+  #       name: blog
+
+  - identifier: sfl
+    name: South Florida ARRL
+    parent: links
+    weight: 11
+    url: http://www.arrl.org/sections/view/southern-florida
+
+  - identifier: ocw
+    name: Osceola County Weather
+    parent: links
+    weight: 13
+    url: https://forecast.weather.gov/MapClick.php?lat=28.068126019000033&lon=-81.14519673199999#.XMmu9y-ZPOQ

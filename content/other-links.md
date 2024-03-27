@@ -28,17 +28,19 @@ menu:
 #         color: '#e24d0e'
 ---
 
-[National Weather Service Forecast and Warnings - Osceola County, FL](http://www.srh.noaa.gov/ifps/MapClick.php?CityName=Kissimmee&amp;state=FL&amp;site=mlb)
-
 [Osceola County (Official Website of Osceola County Government)](http://www.osceola.org)
+
+[Federal Communications Commission](http://wireless.fcc.gov/services/amateur/index.html)
 
 [FEMA: National Situation Update](http://www.fema.gov/emergency/reports/index.shtm)
 
-[AMSAT, Radio Amateur Satellite Corporation](http://www.amsat.org/)
-
-[ARRL, American Radio Relay League](http://www.arrl.org)
-
 [National Weather Service Forecast and Warnings - Osceola County, FL](http://www.srh.noaa.gov/ifps/MapClick.php?CityName=Kissimmee&amp;state=FL&amp;site=mlb)
+
+[National Hurricane Center Amateur Radio Station](http://www.fiu.edu/~w4ehw/)
+
+[National SKYWARN Home Page](http://www.skywarn.org/)
+
+[American Radio Relay League (ARRL)](http://www.arrl.org)
 
 [ARRL Announcements](http://www.arrl.org/announce/)
 
@@ -48,9 +50,9 @@ menu:
 
 [ARRL Southeastern Division](http://www.southeastern.arrl.org/)
 
-[Callsign Lookup, QRZ](http://www.qrz.com/)
+[Radio Amateur Civil Emergency Service (RACES)](http://www.qsl.net/races/)
 
-[Federal Communications Commission](http://wireless.fcc.gov/services/amateur/index.html)
+[Callsign Lookup, QRZ](http://www.qrz.com/)
 
 [Florida Repeater Council](http://www.florida-repeaters.org)
 
@@ -58,16 +60,12 @@ menu:
 
 [Florida Division of Forestry](http://www.fl-dof.com)
 
-[The DX Zone](http://www.dxzone.com)
-
 [Florida Contest Group](http://www.floridacontestgroup.org)
 
+[AMSAT, Radio Amateur Satellite Corporation](http://www.amsat.org/)
+
+[The DX Zone](http://www.dxzone.com)
+
 [How To Become An Antenna Guru](http://pmos.upc.es/blues/old_web/lab_bt/docs/r4a/useful%20documents/how%20to%20become%20and%20antenna%20guru.htm)
-
-[Radio Amateur Civil Emergency Service (RACES)](http://www.qsl.net/races/)
-
-[National Hurricane Center Amateur Radio Station](http://www.fiu.edu/~w4ehw/)
-
-[National SkyWarn Home Page](http://www.skywarn.org/)
 
 [Part 97--Amateur Radio Service Rules and Regulations](http://www.access.gpo.gov/nara/cfr/waisidx_98/47cfr97_98.html)

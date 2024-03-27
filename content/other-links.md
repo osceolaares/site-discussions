@@ -28,44 +28,44 @@ menu:
 #         color: '#e24d0e'
 ---
 
-[Osceola County (Official Website of Osceola County Government)](http://www.osceola.org)
+[Osceola County (Official Website of Osceola County Government)](https://www.osceola.org/)
 
-[Federal Communications Commission](http://wireless.fcc.gov/services/amateur/index.html)
+[Federal Communications Commission](https://www.fcc.gov/wireless/bureau-divisions/mobility-division/amateur-radio-service)
 
-[FEMA: National Situation Update](http://www.fema.gov/emergency/reports/index.shtm)
+[FEMA: National Situation Update](http://www.fema.gov/emergency/reports/index.shtm) [^1]
 
-[National Weather Service Forecast and Warnings - Osceola County, FL](http://www.srh.noaa.gov/ifps/MapClick.php?CityName=Kissimmee&amp;state=FL&amp;site=mlb)
+[FEMA: Daily Operation Brief](https://disastercenter.com/FEMA%20Daily%20Operation%20Brief.pdf)
 
-[National Hurricane Center Amateur Radio Station](http://www.fiu.edu/~w4ehw/)
+[National Hurricane Center Amateur Radio Station](https://w4ehw.fiu.edu/)
 
-[National SKYWARN Home Page](http://www.skywarn.org/)
+[National SKYWARN Home Page](https://www.weather.gov/SKYWARN)
 
-[American Radio Relay League (ARRL)](http://www.arrl.org)
+[American Radio Relay League (ARRL)](https://www.arrl.org/)
 
-[ARRL Announcements](http://www.arrl.org/announce/)
+[ARRL Bulletins](https://www.arrl.org/w1aw/)
 
-[ARRL Bulletins](http://www.arrl.org/w1aw/)
+[ARRL Letter](https://www.arrl.org/arrlletter)
 
-[ARRL Letter](http://www.arrl.org/arrlletter/)
+[ARRL Southeastern Division](https://www.arrl.org/divisions/view/southeastern)
 
-[ARRL Southeastern Division](http://www.southeastern.arrl.org/)
+[Radio Amateur Civil Emergency Service (RACES)](https://www.qsl.net/races/)
 
-[Radio Amateur Civil Emergency Service (RACES)](http://www.qsl.net/races/)
+[Callsign Lookup, QRZ](https://www.qrz.com/)
 
-[Callsign Lookup, QRZ](http://www.qrz.com/)
+[Florida Amateur Spectrum Management Association (FASMA)](hhttps://fasma.org/frequently-asked-questions/)
 
-[Florida Repeater Council](http://www.florida-repeaters.org)
+[Florida Division of Emergency Management](https://www.floridadisaster.org/)
 
-[Florida Division of Emergency Management](http://www.floridadisaster.org)
+[Florida Division of Forestry](https://www.fdacs.gov/Divisions-Offices/Florida-Forest-Service)
 
-[Florida Division of Forestry](http://www.fl-dof.com)
+[Florida Contest Group](https://floridacontestgroup.org/)
 
-[Florida Contest Group](http://www.floridacontestgroup.org)
+[AMSAT, Radio Amateur Satellite Corporation](https://www.amsat.org/)
 
-[AMSAT, Radio Amateur Satellite Corporation](http://www.amsat.org/)
+[The DX Zone](https://www.dxzone.com/)
 
-[The DX Zone](http://www.dxzone.com)
+[How To Become An Antenna Guru](http://pmos.upc.es/blues/old_web/lab_bt/docs/r4a/useful%20documents/how%20to%20become%20and%20antenna%20guru.htm) [^1]
 
-[How To Become An Antenna Guru](http://pmos.upc.es/blues/old_web/lab_bt/docs/r4a/useful%20documents/how%20to%20become%20and%20antenna%20guru.htm)
+[Part 97--Amateur Radio Service Rules and Regulations](http://www.access.gpo.gov/nara/cfr/waisidx_98/47cfr97_98.html) [^1]
 
-[Part 97--Amateur Radio Service Rules and Regulations](http://www.access.gpo.gov/nara/cfr/waisidx_98/47cfr97_98.html)
+[^1]: Link broken last checked

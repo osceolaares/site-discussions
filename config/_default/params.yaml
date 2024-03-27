@@ -85,15 +85,15 @@ hb:
         - docs
         - blog
         - news
-    giscus:
-      repo: hbstack/theme-cards
-      repo_id: R_kgDOK1LmSQ
-      category_id: DIC_kwDOK1LmSc4CbdiM
+    # giscus:
+    #   repo: hbstack/theme-cards
+    #   repo_id: R_kgDOK1LmSQ
+    #   category_id: DIC_kwDOK1LmSc4CbdiM
   docs:
-    giscus:
-      repo: hbstack/theme-cards
-      repo_id: R_kgDOK1LmSQ
-      category_id: DIC_kwDOK1LmSc4CbdiM
+    # giscus:
+    #   repo: hbstack/theme-cards
+    #   repo_id: R_kgDOK1LmSQ
+    #   category_id: DIC_kwDOK1LmSc4CbdiM
     social_share_buttons:
       alignment: center
       media:
@@ -103,9 +103,9 @@ hb:
   content_panel:
     repo:
       service: github # github or gitlab.
-      repo: hbstack/theme-cards
+      repo: jbouse/osceola-ares
       branch: main
-      subpath: exampleSite
+      # subpath: exampleSite
   gallery:
     date_sort_order: asc
     highlight_images_count: 10
@@ -135,7 +135,7 @@ search:
   stall_threshold: 300
   min_match_char_length: 2
   case_sensitive: false
-  # shortcut_search: ["/"]
+  shortcut_search: ["/"]
 
 mermaid:
   # replace it with other CDNs or self-hosted URLs.

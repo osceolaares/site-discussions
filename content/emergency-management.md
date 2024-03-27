@@ -17,7 +17,7 @@ categories:
 tags:
 #  - 
 images:
- - /images/ocoem.png
+#  - /images/Osceola_County_logo.png
 authors:
 #  -
 menu:

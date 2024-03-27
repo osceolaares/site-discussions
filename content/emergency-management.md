@@ -23,10 +23,10 @@ authors:
 menu:
   main:
     identifier: em
-    weight: 7
-#     params:
-#       icon:
-#         vendor: bs
-#         name: book
+    weight: 30
+    params:
+      icon:
+        vendor: far
+        name: circle-question
 #         color: '#e24d0e'
 ---

@@ -12,9 +12,19 @@ main:
     parent: links
     weight: 11
     url: http://www.arrl.org/sections/view/southern-florida
+    params:
+      icon:
+        vendor: fas
+        name: arrow-up-right-from-square
+        # name: people-group
 
   - identifier: ocw
     name: Osceola County Weather
     parent: links
     weight: 13
     url: https://forecast.weather.gov/MapClick.php?lat=28.068126019000033&lon=-81.14519673199999#.XMmu9y-ZPOQ
+    params:
+      icon:
+        vendor: fas
+        name: arrow-up-right-from-square
+        # name: cloud-sun

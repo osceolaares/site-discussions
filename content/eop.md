@@ -20,12 +20,12 @@ authors:
 #  -
 menu:
   main:
-    weight: 17
+    weight: 40
     parent: about
-#     params:
-#       icon:
-#         vendor: bs
-#         name: book
+    params:
+      icon:
+        vendor: fas
+        name: file-lines
 #         color: '#e24d0e'
 ---
 

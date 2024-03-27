@@ -20,12 +20,12 @@ authors:
 #  -
 menu:
   main:
-    weight: 18
+    weight: 10
     parent: about
-#     params:
-#       icon:
-#         vendor: bs
-#         name: book
+    params:
+      icon:
+        vendor: fas
+        name: tower-cell
 #         color: '#e24d0e'
 ---
 

@@ -19,12 +19,12 @@ authors:
 #  -
 menu:
   main:
-    weight: 15
+    weight: 20
     parent: about
-#     params:
-#       icon:
-#         vendor: bs
-#         name: book
+    params:
+      icon:
+        vendor: far
+        name: calendar-days
 #         color: '#e24d0e'
 ---
 

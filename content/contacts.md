@@ -19,12 +19,12 @@ authors:
 #  -
 menu:
   main:
-    weight: 14
+    weight: 30
     parent: about
-#     params:
-#       icon:
-#         vendor: bs
-#         name: book
+    params:
+      icon:
+        vendor: far
+        name: address-book
 #         color: '#e24d0e'
 ---
 

@@ -21,11 +21,11 @@ authors:
 menu:
   main:
     identifier: about
-    weight: 15
-#     params:
-#       icon:
-#         vendor: bs
-#         name: book
+    weight: 90
+    params:
+      icon:
+        vendor: fas
+        name: bullseye
 #         color: '#e24d0e'
 ---
 

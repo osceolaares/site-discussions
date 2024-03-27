@@ -19,11 +19,11 @@ authors:
 #  -
 menu:
   main:
-    weight: 5
-#     params:
-#       icon:
-#         vendor: bs
-#         name: book
+    weight: 10
+    params:
+      icon:
+        vendor: far
+        name: circle-question
 #         color: '#e24d0e'
 ---
 

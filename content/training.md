@@ -19,12 +19,12 @@ authors:
 #  -
 menu:
   main:
-    weight: 12
+    weight: 100
     parent: about
-#     params:
-#       icon:
-#         vendor: bs
-#         name: book
+    params:
+      icon:
+        vendor: fas
+        name: chalkboard-user
 #         color: '#e24d0e'
 ---
 

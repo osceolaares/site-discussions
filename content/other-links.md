@@ -21,10 +21,10 @@ menu:
   main:
     identifier: links
     weight: 100
-#     params:
-#       icon:
-#         vendor: bs
-#         name: book
+    params:
+      icon:
+        vendor: fas
+        name: link
 #         color: '#e24d0e'
 ---
 

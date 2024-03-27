@@ -56,6 +56,7 @@ imports:
   # - path: github.com/hugomods/google-analytics
   # - path: github.com/hugomods/google-adsense
   - path: github.com/hbstack/iframe
+  - path: github.com/hbstack/background-image
   
   # recommended modules
   # check which modules were imported by recommended module by "hugo mod graph | grep recommended".

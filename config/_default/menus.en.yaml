@@ -8,7 +8,7 @@ main:
   #       name: blog
 
   - identifier: sfl
-    name: South Florida ARRL
+    name: ARRL South Florida Section
     parent: links
     weight: 11
     url: http://www.arrl.org/sections/view/southern-florida

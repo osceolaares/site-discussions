@@ -30,11 +30,7 @@ menu:
 
 ## Regular monthly meetings
 
-Meetings are held on the last Monday of the month: AEC @ 18:00 - 18:15, General @ 18:15 - 19:00
-
-at:
-
-Osceola County, Dept Of Emergency Management
+Meetings are held at 18:00 on the last Monday of the month at the Osceola County, Dept Of Emergency Management.
 
 Osceola County EOC</br>
 2586 Partin Settlement Rd</br>

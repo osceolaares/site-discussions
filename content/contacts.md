@@ -35,15 +35,17 @@ menu:
 | {{< qrz N4ZIQ >}} | Joe Reilly | <n4ziq@n4ziq.com> | Emergency Coordinator |
 | {{< qrz KJ4PNA >}} | John Chapman | <chiefjchapman@bellsouth.net> | AEC - Recruiting & Training |
 | {{< qrz K9YAP >}} | Randy Fox | <K9YAP@thefoxden.com> | AEC - Technical |
-| {{< qrz K9YAP >}} | Randy Fox | <K9YAP@thefoxden.com> | Webmaster |
-| {{< qrz N4ZZG >}} | William Burchfield | <bbur@property-appraiser.org> | Net Control Manager |
+| {{< qrz N4ZZG >}} | William Burchfield | <wburchfiel@aol.com> | Net Control Manager |
 
 ## Osceola ARES
 
 | Callsign | Name | Email | Position |
 | :------: | ---- | ----- | -------- |
 | {{< qrz KO4POJ >}} | Luis "Lou" Corrales | <KO4POJ@gmail.com> | President |
-| | | | Vice President |
+| {{< qrz KG4FZO >}} | Richard Halquist | <richard.halquist@outlook.com> | Vice President |
+| {{< qrz N4ZZG >}} | William Burchfield | <wburchfiel@aol.com> | Vice President |
+| {{< qrz KK4OKZ >}} | James Cokos | <jrcokos@gmail.com> | Secretary |
 | {{< qrz KQ4AFY >}} | Jeremy T. Bouse | <operator@KQ4AFY.xyz> | Treasurer |
-| | | | Secretary |
-| {{< qrz N4ZZG >}} | William Burchfield | <bbur@property-appraiser.org> | Manager |
+| {{< qrz N4ZIQ >}} | Joe Reilly | <n4ziq@n4ziq.com> | Director |
+| {{< qrz KJ4PNA >}} | John Chapman | <chiefjchapman@bellsouth.net> | Director |
+| {{< qrz K9ADI >}} | Scott Halquist | <K9ADI@outlook.com> | Webmaster |

@@ -16,15 +16,6 @@ defaults:
     shell: bash
   
 jobs:
-  setup:
-    name: Setup environment
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-  
-
   deploy-infra:
     name: Deploy Terraform Infrastructure as Code
     runs-on: ubuntu-latest
@@ -47,7 +38,7 @@ jobs:
       uses: aws-actions/configure-aws-credentials@v4
       with:
         role-to-assume: arn:aws:iam::${{ secrets.AWS_ACCOUNT_ID }}:role/jbouse-gbl-github-actions
-        role-session-name: ugns-github-actions
+        role-session-name: jbouse-github-actions
         aws-region: us-east-1
 
     - name: Terraform Format
@@ -120,8 +111,8 @@ jobs:
     - name: Configure AWS credentials
       uses: aws-actions/configure-aws-credentials@v4
       with:
-        role-to-assume: arn:aws:iam::${{ secrets.AWS_ACCOUNT_ID }}:role/ugns-gbl-github-actions
-        role-session-name: ugns-github-actions
+        role-to-assume: arn:aws:iam::${{ secrets.AWS_ACCOUNT_ID }}:role/jbouse-gbl-github-actions
+        role-session-name: jbouse-github-actions
         aws-region: us-east-1
 
     - name: Assume IAM Role

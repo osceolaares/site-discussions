@@ -93,7 +93,7 @@ jobs:
         hugo-version: '0.124.1'
         extended: true
 
-    - uses: actions/cache@v3
+    - uses: actions/cache@v4
       with:
         path: /home/runner/.cache/hugo_cache    # <-- with hugo version v0.116.0 and above
         key: ${{ runner.os }}-hugomod-${{ hashFiles('**/go.sum') }}
@@ -129,4 +129,4 @@ jobs:
 
     - name: Hugo Deploy
       if: github.ref == 'refs/heads/main' && github.event_name == 'push'
-      run: hugo deploy --target AWS
+      run: hugo deploy --maxDeletes -1 --target AWS --logLevel info

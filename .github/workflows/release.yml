@@ -65,8 +65,8 @@ jobs:
     - name: Output Terraform values
       id: terraform
       run: |
-        echo "DID=$(terraform output cloudFrontDistributionID)" >> "$GITHUB_OUTPUT"
-        echo "URL=$(terraform output URL)" >> "$GITHUB_OUTPUT"
+        echo "DID=$(terraform output -raw cloudFrontDistributionID)" >> "$GITHUB_OUTPUT"
+        echo "URL=$(terraform output -raw URL)" >> "$GITHUB_OUTPUT"
 
   build-hugo:
     name: Generate site

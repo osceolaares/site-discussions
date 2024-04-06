@@ -2,7 +2,7 @@
 title: "Training"
 date: 2024-03-26T23:17:32-04:00
 draft: false
-# description: "Training"
+description: "Emergency Response Training"
 noindex: false
 featured: false
 pinned: false
@@ -28,6 +28,12 @@ menu:
 #         color: '#e24d0e'
 ---
 
-FEMA IS Courses
+Federal Emergency Management Agency (FEMA)
 
-[NIMS and ISC Training](http://training.fema.gov/is/nims.aspx)
+[NIMS | Emergency Management Institute](https://training.fema.gov/nims/)
+
+[FEMA Student ID](https://cdp.dhs.gov/femasid)
+
+Florida Division of Emergency Management (FDEM)
+
+[SERT TRAC](https://trac.floridadisaster.org/TRAC)

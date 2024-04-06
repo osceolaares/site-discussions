@@ -11,6 +11,10 @@ module "cdn" {
   s3_website_password_enabled = true
   allow_ssl_requests_only     = false
   price_class                 = "PriceClass_All"
+  default_ttl                 = 86400
+  min_ttl                     = 3600
+  max_ttl                     = 2592000
+  minimum_protocol_version    = "TLSv1.2_2021"
   custom_error_response = [
     {
       error_caching_min_ttl = null

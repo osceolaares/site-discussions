@@ -20,8 +20,8 @@ jobs:
     name: Deploy Terraform Infrastructure as Code
     runs-on: ubuntu-latest
     outputs:
-      distribution: ${{ steps.cdn.outputs.ID }}
-      bucket: ${{ steps.s3.outputs.URL }}
+      distribution: ${{ steps.terraform.outputs.DID }}
+      bucket: ${{ steps.terraform.outputs.URL }}
 
     defaults:
       run:
@@ -62,13 +62,11 @@ jobs:
       if: github.ref == 'refs/heads/main' && github.event_name == 'push'
       run: terraform apply -no-color -auto-approve
 
-    - name: Output Cloudfront Distribution ID
-      id: cdn
-      run: echo "ID=$(terraform output cloudFrontDistributionID)" >> "$GITHUB_OUTPUT"
-
-    - name: Output S3 bucket URL
-      id: s3
-      run: echo "URL=$(terraform output URL)" >> "$GITHUB_OUTPUT"
+    - name: Output Terraform values
+      id: terraform
+      run: 
+        echo "DID=$(terraform output cloudFrontDistributionID)" >> "$GITHUB_OUTPUT"
+        echo "URL=$(terraform output URL)" >> "$GITHUB_OUTPUT"
 
   build-hugo:
     name: Generate site
@@ -89,7 +87,7 @@ jobs:
     - run: npm ci
 
     - name: Setup Hugo
-      uses: peaceiris/actions-hugo@v2
+      uses: peaceiris/actions-hugo@v3
       with:
         hugo-version: '0.124.1'
         extended: true
@@ -123,14 +121,14 @@ jobs:
         role-chaining: true
         aws-region: us-east-1
 
-    - env:
-        OUTPUT1: ${{needs.deploy-infra.outputs.distribution}}
-        OUTPUT2: ${{needs.deploy-infra.outputs.bucket}}
-      run: echo "$OUTPUT1 $OUTPUT2"
+    - name: Update CloudFront Deployment
+      run:
+        sed -i "s/CLOUDFRONT_DISTRIBUTION_ID/${{needs.deploy-infra.outputs.distribution}}/g" config/production/deployment.yaml
+        sed -i "s/S3_BUCKET_URL/${{needs.deploy-infra.outputs.bucket}}/g" config/production/deployment.yaml
 
-    # - name: Hugo Deploy (dry-run)
+    - name: Hugo Deploy (dry-run)
     #   if: github.event_name == 'pull_request'
-    #   run: hugo deploy --dryRun --target AWS
+      run: hugo deploy --dryRun --target AWS
 
     # - name: Hugo Deploy
     #   if: github.ref == 'refs/heads/main' && github.event_name == 'push'

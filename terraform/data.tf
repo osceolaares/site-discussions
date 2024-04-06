@@ -9,6 +9,6 @@ data "aws_acm_certificate" "this" {
   most_recent = true
 }
 
-data "aws_s3_bucket" "this" {
-  bucket = format("%s.%s", var.host_name, var.domain_name)
-}
+# data "aws_s3_bucket" "this" {
+#   bucket = format("%s.%s", var.host_name, var.domain_name)
+# }

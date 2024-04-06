@@ -5,7 +5,6 @@ module "cdn" {
   namespace                   = "oares"
   stage                       = "use1"
   name                        = "cdn"
-#   origin_bucket               = data.aws_s3_bucket.this.bucket
   aliases                     = [format("%s.%s", var.host_name, var.domain_name)]
   dns_alias_enabled           = true
   website_enabled             = true

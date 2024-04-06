@@ -93,18 +93,16 @@ jobs:
         hugo-version: '0.124.1'
         extended: true
 
-    - uses: actions/cache@v4
-      with:
-        path: ~/.cache/hugo_cache    # <-- with hugo version v0.116.0 and above
-        key: ${{ runner.os }}-hugomod-${{ hashFiles('**/go.sum') }}
-        restore-keys: |
-          ${{ runner.os }}-hugomod-
+    # - uses: actions/cache@v4
+    #   with:
+    #     path: ~/.cache/hugo_cache    # <-- with hugo version v0.116.0 and above
+    #     key: ${{ runner.os }}-hugomod-${{ hashFiles('**/go.sum') }}
+    #     restore-keys: |
+    #       ${{ runner.os }}-hugomod-
       
     - name: Hugo Build
       run: hugo --gc --enableGitInfo --minify
 
-    - run: ls -l ~/.cache/hugo
-  
     - name: Configure AWS credentials
       uses: aws-actions/configure-aws-credentials@v4
       with:
@@ -120,7 +118,7 @@ jobs:
         role-chaining: true
         aws-region: us-east-1
 
-    - name: Update CloudFront Deployment
+    - name: Update Hugo Deployment
       run: |
         sed -i "s@CLOUDFRONT_DISTRIBUTION_ID@${{ needs.deploy-infra.outputs.distribution }}@g" config/production/deployment.yaml
         sed -i "s@S3_BUCKET_URL@${{ needs.deploy-infra.outputs.bucket }}@g" config/production/deployment.yaml

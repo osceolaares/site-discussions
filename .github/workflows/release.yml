@@ -69,7 +69,7 @@ jobs:
         echo "URL=$(terraform output -raw URL)" >> "$GITHUB_OUTPUT"
 
   build-hugo:
-    name: Generate site
+    name: Generate Hugo site
     runs-on: ubuntu-latest
     needs: deploy-infra
 
@@ -124,8 +124,8 @@ jobs:
 
     - name: Update CloudFront Deployment
       run: |
-        sed -i "s/CLOUDFRONT_DISTRIBUTION_ID/${{ needs.deploy-infra.outputs.distribution }}/g" config/production/deployment.yaml
-        sed -i "s/S3_BUCKET_URL/${{ needs.deploy-infra.outputs.bucket }}/g" config/production/deployment.yaml
+        sed -i "s@CLOUDFRONT_DISTRIBUTION_ID@${{ needs.deploy-infra.outputs.distribution }}@g" config/production/deployment.yaml
+        sed -i "s@S3_BUCKET_URL@${{ needs.deploy-infra.outputs.bucket }}@g" config/production/deployment.yaml
 
     - name: Hugo Deploy (dry-run)
     #   if: github.event_name == 'pull_request'

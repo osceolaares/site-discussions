@@ -82,7 +82,6 @@ jobs:
   build-hugo:
     name: Generate site
     runs-on: ubuntu-latest
-    needs: setup
 
     env:
       HUGO_ENV: production
@@ -118,12 +117,12 @@ jobs:
       HUGO_ENV: production
     
     steps:
-    # - name: Configure AWS credentials
-    #   uses: aws-actions/configure-aws-credentials@v4
-    #   with:
-    #     role-to-assume: arn:aws:iam::${{ secrets.AWS_ACCOUNT_ID }}:role/ugns-gbl-github-actions
-    #     role-session-name: ugns-github-actions
-    #     aws-region: us-east-1
+    - name: Configure AWS credentials
+      uses: aws-actions/configure-aws-credentials@v4
+      with:
+        role-to-assume: arn:aws:iam::${{ secrets.AWS_ACCOUNT_ID }}:role/ugns-gbl-github-actions
+        role-session-name: ugns-github-actions
+        aws-region: us-east-1
 
     - name: Assume IAM Role
       uses: aws-actions/configure-aws-credentials@v4

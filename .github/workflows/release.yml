@@ -64,7 +64,7 @@ jobs:
 
     - name: Output Terraform values
       id: terraform
-      run: 
+      run: |
         echo "DID=$(terraform output cloudFrontDistributionID)" >> "$GITHUB_OUTPUT"
         echo "URL=$(terraform output URL)" >> "$GITHUB_OUTPUT"
 
@@ -122,7 +122,7 @@ jobs:
         aws-region: us-east-1
 
     - name: Update CloudFront Deployment
-      run:
+      run: |
         sed -i "s/CLOUDFRONT_DISTRIBUTION_ID/${{needs.deploy-infra.outputs.distribution}}/g" config/production/deployment.yaml
         sed -i "s/S3_BUCKET_URL/${{needs.deploy-infra.outputs.bucket}}/g" config/production/deployment.yaml
 

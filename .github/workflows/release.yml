@@ -1,0 +1,136 @@
+name: Deploy Hugo site
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+permissions:
+  id-token: write
+  contents: read
+  pull-requests: write
+
+defaults:
+  run:
+    shell: bash
+  
+jobs:
+  setup:
+    name: Setup environment
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+  
+
+  deploy-infra:
+    name: Deploy Terraform Infrastructure as Code
+    runs-on: ubuntu-latest
+    needs: setup
+    outputs:
+      distribution: ${{ steps.cdn.outputs.ID }}
+      bucket: ${{ steps.s3.outputs.URL }}
+
+    defaults:
+      run:
+        working-directory: terraform/
+  
+    steps:
+    - name: Setup Terraform
+      uses: hashicorp/setup-terraform@v3
+
+    - name: Configure AWS credentials
+      uses: aws-actions/configure-aws-credentials@v4
+      with:
+        role-to-assume: arn:aws:iam::${{ secrets.AWS_ACCOUNT_ID }}:role/jbouse-gbl-github-actions
+        role-session-name: ugns-github-actions
+        aws-region: us-east-1
+
+    - name: Terraform Format
+      id: fmt
+      run: terraform fmt -no-color -check
+      continue-on-error: true
+
+    - name: Terraform Init
+      id: init
+      run: terraform init -no-color
+    
+    - name: Terraform Validate
+      id: validate
+      run: terraform validate -no-color
+    
+    - name: Terraform Plan
+      id: plan
+      run: terraform plan -no-color
+
+    - name: Terraform Apply
+      if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+      run: terraform apply -no-color -auto-approve
+
+    - name: Output Cloudfront Distribution ID
+      id: cdn
+      run: echo "ID=$(terraform output cloudFrontDistributionID)" >> "$GITHUB_OUTPUT"
+
+    - name: Output S3 bucket URL
+      id: s3
+      run: echo "URL=$(terraform output URL)" >> "$GITHUB_OUTPUT"
+
+  build-hugo:
+    name: Generate site
+    runs-on: ubuntu-latest
+    needs: setup
+
+    steps:
+    - name: Setup node
+      uses: actions/setup-node@v4
+      with:
+        node-version: 'lts/*'
+
+    - run: npm ci
+
+    - name: Setup Hugo
+      uses: peaceiris/actions-hugo@v2
+      with:
+        hugo-version: '0.124.1'
+        extended: true
+
+    - name: Hugo Build
+      run: hugo --gc --enableGitInfo --minify
+
+  deploy-hugo:
+    name: Deploy site
+    runs-on: ubuntu-latest
+    needs:
+    - deploy-infra
+    - build-hugo
+
+    steps:
+    # - name: Configure AWS credentials
+    #   uses: aws-actions/configure-aws-credentials@v4
+    #   with:
+    #     role-to-assume: arn:aws:iam::${{ secrets.AWS_ACCOUNT_ID }}:role/ugns-gbl-github-actions
+    #     role-session-name: ugns-github-actions
+    #     aws-region: us-east-1
+
+    - name: Assume IAM Role
+      uses: aws-actions/configure-aws-credentials@v4
+      with:
+        role-to-assume: arn:aws:iam::072105303426:role/GitHubActionsExecution
+        role-skip-session-tagging: true
+        role-chaining: true
+        aws-region: us-east-1
+
+    - env:
+        OUTPUT1: ${{needs.deploy-infra.outputs.distribution}}
+        OUTPUT2: ${{needs.deploy-infra.outputs.bucket}}
+      run: echo "$OUTPUT1 $OUTPUT2"
+
+    # - name: Hugo Deploy (dry-run)
+    #   if: github.event_name == 'pull_request'
+    #   run: hugo deploy --dryRun --target AWS
+
+    # - name: Hugo Deploy
+    #   if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    #   run: hugo deploy --target AWS

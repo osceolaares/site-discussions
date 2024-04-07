@@ -7,6 +7,7 @@ require (
 	github.com/KaTeX/KaTeX v0.16.10 // indirect
 	github.com/gohugoio/hugo-mod-bootstrap-scss/v5 v5.20300.20200 // indirect
 	github.com/gohugoio/hugo-mod-jslibs-dist/popperjs/v2 v2.21100.20000 // indirect
+	github.com/hbstack/announcement-bar v0.4.1 // indirect
 	github.com/hbstack/back-to-top v0.2.0 // indirect
 	github.com/hbstack/background-image v0.2.1 // indirect
 	github.com/hbstack/base v0.4.6 // indirect
@@ -19,6 +20,7 @@ require (
 	github.com/hbstack/blog/modules/heading-sign v0.1.23 // indirect
 	github.com/hbstack/blog/modules/post-nav v0.3.6 // indirect
 	github.com/hbstack/blog/modules/related-posts v0.2.5 // indirect
+	github.com/hbstack/blog/modules/revision v0.1.0 // indirect
 	github.com/hbstack/blog/modules/sidebar/posts v0.7.0 // indirect
 	github.com/hbstack/blog/modules/sidebar/profile v1.1.5 // indirect
 	github.com/hbstack/blog/modules/sidebar/taxonomies v0.4.0 // indirect
@@ -57,6 +59,7 @@ require (
 	github.com/hbstack/pagination v0.6.0 // indirect
 	github.com/hbstack/progress-bar v0.1.0 // indirect
 	github.com/hbstack/pwa v0.1.2 // indirect
+	github.com/hbstack/revision v0.4.0 // indirect
 	github.com/hbstack/scrollbar v0.1.0 // indirect
 	github.com/hbstack/search v0.2.1 // indirect
 	github.com/hbstack/slide v0.3.1 // indirect
@@ -74,6 +77,7 @@ require (
 	github.com/hugomods/font-awesome v6.5.1+incompatible // indirect
 	github.com/hugomods/fuse-js v0.1.0 // indirect
 	github.com/hugomods/giscus v0.1.1 // indirect
+	github.com/hugomods/google-analytics v0.2.0 // indirect
 	github.com/hugomods/gravatar v0.2.0 // indirect
 	github.com/hugomods/hugopress v0.2.3 // indirect
 	github.com/hugomods/i18n-js v0.2.1 // indirect

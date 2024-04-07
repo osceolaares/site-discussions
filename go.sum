@@ -6,6 +6,8 @@ github.com/gohugoio/hugo-mod-bootstrap-scss/v5 v5.20300.20200 h1:SmpwwN3DNzJWbV+
 github.com/gohugoio/hugo-mod-bootstrap-scss/v5 v5.20300.20200/go.mod h1:kx8MBj9T7SFR8ZClWvKZPmmUxBaltkoXvnWlZZcSnYA=
 github.com/gohugoio/hugo-mod-jslibs-dist/popperjs/v2 v2.21100.20000 h1:GZxx4Hc+yb0/t3/rau1j8XlAxLE4CyXns2fqQbyqWfs=
 github.com/gohugoio/hugo-mod-jslibs-dist/popperjs/v2 v2.21100.20000/go.mod h1:mFberT6ZtcchrsDtfvJM7aAH2bDKLdOnruUHl0hlapI=
+github.com/hbstack/announcement-bar v0.4.1 h1:DeyC9hBFCKdZVMyRa9pj3X6MsOiVTVc8X1vmLMVy0Kg=
+github.com/hbstack/announcement-bar v0.4.1/go.mod h1:TTSTE34jtsCJ3GDECylEyS5ljexJY8eIwhDhKmDFCkg=
 github.com/hbstack/back-to-top v0.2.0 h1:oVGYYL34PL4OX2O725YmRL9kHjZuxBuyT33/ZG1Zze0=
 github.com/hbstack/back-to-top v0.2.0/go.mod h1:lVnZhVZ8pabJJ/M27APUyayelJO5yr9jkwsVnxk1O4k=
 github.com/hbstack/background-image v0.2.1 h1:IRa4pGsv6/OdCytpogaWZJdERV1LYV+3J/LG4WIHlq0=
@@ -30,6 +32,8 @@ github.com/hbstack/blog/modules/post-nav v0.3.6 h1:ZyYbLdPCfV8bILLliBiCm6TxJOY/n
 github.com/hbstack/blog/modules/post-nav v0.3.6/go.mod h1:NjxKH/72tO9mtUwUvtgD3mIGSNYHmFe6YisS6zSJd6s=
 github.com/hbstack/blog/modules/related-posts v0.2.5 h1:e5IF1TK8A/7Tpp6Eso43Ns2//BSbJYsFmOW+1yeKN0U=
 github.com/hbstack/blog/modules/related-posts v0.2.5/go.mod h1:MG7gAdmJIMDTRD9Qyx3ANsJCY/xmG12zO69aDSKWDlE=
+github.com/hbstack/blog/modules/revision v0.1.0 h1:5qx8ki82yUmyrm01T7WXuCsWuUljWb+CNczI8Y0vpb4=
+github.com/hbstack/blog/modules/revision v0.1.0/go.mod h1:IzYAbBSORl4IjkEoKITBG6lVTLK3PIkbTewNnWJJEoM=
 github.com/hbstack/blog/modules/sidebar/posts v0.7.0 h1:xy70nHr/Qznc1Xmmn2RJdmxK8imXx9G6LPAPFkwzSLg=
 github.com/hbstack/blog/modules/sidebar/posts v0.7.0/go.mod h1:jmdYFY1EtH74KWOS89xnCowNtaEkkhI6G/vHJaT6OJ0=
 github.com/hbstack/blog/modules/sidebar/profile v1.1.5 h1:e546kxltRyQj/A8bp2SBjm8LIQwZN45qK5V+5zU67nM=
@@ -106,6 +110,8 @@ github.com/hbstack/progress-bar v0.1.0 h1:2ZiGS3RFZbZYBUbT2nFCoU9SJsbD9jtV4A7ab4
 github.com/hbstack/progress-bar v0.1.0/go.mod h1:JZt160XK62FxThzt+RmokjOww3De8ZL0ITcxMJLVE7g=
 github.com/hbstack/pwa v0.1.2 h1:zJhLf5Uf+jO9aCBKvFcASlw7sULK2i0qUJZxscBo0HM=
 github.com/hbstack/pwa v0.1.2/go.mod h1:8x01rczLrSw1aCWD+yrn6v5FRQPtaEh/PYCtFDICEWo=
+github.com/hbstack/revision v0.4.0 h1:1/n20kupOHzrwiHgKmk51NgGzAF72OccNd5yHBighas=
+github.com/hbstack/revision v0.4.0/go.mod h1:2vBaKjzvE+9W7bXGLo88msetPSsEIdp9fNrXrioQMkQ=
 github.com/hbstack/scrollbar v0.1.0 h1:uQMNbkWbLxnjQMiD3zdt33RG48sY2a0XWyGQkK2HsyY=
 github.com/hbstack/scrollbar v0.1.0/go.mod h1:BEDha5gOjQfXBKZfwT+4vn8hCE88qElocjEI2SY1eAs=
 github.com/hbstack/search v0.2.1 h1:u7DbLPZ0WO1db2ARb2reubn5KzPE3wG6NLrgylB6WQg=
@@ -140,6 +146,8 @@ github.com/hugomods/fuse-js v0.1.0 h1:CmWHBZANvjOP44RDNQNLntqlLf9GLqeM29jekxTNcP
 github.com/hugomods/fuse-js v0.1.0/go.mod h1:srCqvtBQR02HS/abTraDU4oINv1D3PljNPdexdoHhpo=
 github.com/hugomods/giscus v0.1.1 h1:Kb8137Cp2nQJPFb6e+CdXy8nyIAJ2dFIymG4bDdaXWI=
 github.com/hugomods/giscus v0.1.1/go.mod h1:tCRkqNi/sMsLh3kjDesXZNzf4R/w+b5oc5boS/l8Jtw=
+github.com/hugomods/google-analytics v0.2.0 h1:ziRPsDMYKAmvfl6ofthJdmXq0w10yxNKI/dF0vbcX0k=
+github.com/hugomods/google-analytics v0.2.0/go.mod h1:Q89C3HmPHn2m2VT1INfnLwkpDyyYRLRIPitLA/aFIy8=
 github.com/hugomods/gravatar v0.2.0 h1:642HNhGN7Mw7qefNcUFJKzLoT2zJKt4IQkrS53mIUfA=
 github.com/hugomods/gravatar v0.2.0/go.mod h1:oATWuh5u2XUK/ZKzOD0VEP5I/TZfVZwplTyhT61Q4Fc=
 github.com/hugomods/hugopress v0.2.3 h1:tbQlJkGcou1KQJOeCN7E3oK8ZREFZoP3kSHcM/Kz718=

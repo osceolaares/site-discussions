@@ -37,6 +37,8 @@ imports:
 
   # blog social share buttons
   - path: github.com/hbstack/blog/modules/social-share-buttons
+  
+  - path: github.com/hbstack/blog/modules/revision
 
   # docs comments engine
   - path: github.com/hbstack/docs/modules/giscus
@@ -53,8 +55,9 @@ imports:
   - path: github.com/hbstack/docs/modules/social-share-buttons
 
   # other modules
-  # - path: github.com/hugomods/google-analytics
+  - path: github.com/hugomods/google-analytics
   # - path: github.com/hugomods/google-adsense
+  - path: github.com/hbstack/announcement-bar
   - path: github.com/hbstack/iframe
   - path: github.com/hbstack/background-image
   

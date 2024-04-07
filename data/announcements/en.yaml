@@ -1,0 +1,8 @@
+new-site:
+  title: We are expediently working on a new site update!
+  weight: 10
+
+next-meeting:
+  title: Our next regular monthly meeting is April 29th, 2024
+  url: meetings
+  weight: 5

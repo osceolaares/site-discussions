@@ -39,7 +39,6 @@ jobs:
       uses: aws-actions/configure-aws-credentials@v4
       with:
         role-to-assume:  ${{ secrets.AWS_GITHUB_ACTIONS_ROLE }}
-        role-session-name: github-actions
         aws-region: us-east-1
 
     - name: Terraform Format
@@ -109,7 +108,6 @@ jobs:
       uses: aws-actions/configure-aws-credentials@v4
       with:
         role-to-assume: ${{ secrets.AWS_GITHUB_ACTIONS_ROLE }}
-        role-session-name: github-actions
         aws-region: us-east-1
 
     - name: Assume IAM Role

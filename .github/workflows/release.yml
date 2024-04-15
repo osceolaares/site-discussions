@@ -22,6 +22,7 @@ jobs:
     outputs:
       distribution: ${{ steps.terraform.outputs.DID }}
       bucket: ${{ steps.terraform.outputs.URL }}
+      baseurl: ${{ steps.terraform.outputs.BASE }}
 
     defaults:
       run:
@@ -37,8 +38,8 @@ jobs:
     - name: Configure AWS credentials
       uses: aws-actions/configure-aws-credentials@v4
       with:
-        role-to-assume: arn:aws:iam::${{ secrets.AWS_ACCOUNT_ID }}:role/jbouse-gbl-github-actions
-        role-session-name: jbouse-github-actions
+        role-to-assume:  ${{ secrets.AWS_GITHUB_ACTIONS_ROLE }}
+        role-session-name: github-actions
         aws-region: us-east-1
 
     - name: Terraform Format
@@ -67,6 +68,7 @@ jobs:
       run: |
         echo "DID=$(terraform output -raw cloudFrontDistributionID)" >> "$GITHUB_OUTPUT"
         echo "URL=$(terraform output -raw URL)" >> "$GITHUB_OUTPUT"
+        echo "BASE=$(terraform output -raw hostname)" >> "$GITHUB_OUTPUT"
 
   build-hugo:
     name: Generate Hugo site
@@ -101,20 +103,19 @@ jobs:
     #       ${{ runner.os }}-hugomod-
       
     - name: Hugo Build
-      run: hugo --gc --enableGitInfo --minify
+      run: hugo --gc --enableGitInfo --minify --baseURL https://${{ needs.deploy-infra.outputs.baseurl }}/
 
     - name: Configure AWS credentials
       uses: aws-actions/configure-aws-credentials@v4
       with:
-        role-to-assume: arn:aws:iam::${{ secrets.AWS_ACCOUNT_ID }}:role/jbouse-gbl-github-actions
-        role-session-name: jbouse-github-actions
+        role-to-assume: ${{ secrets.AWS_GITHUB_ACTIONS_ROLE }}
+        role-session-name: github-actions
         aws-region: us-east-1
 
     - name: Assume IAM Role
       uses: aws-actions/configure-aws-credentials@v4
       with:
-        role-to-assume: arn:aws:iam::072105303426:role/GitHubActionsExecution
-        role-skip-session-tagging: true
+        role-to-assume: ${{ secrets.AWS_TERRAFORM_DEPLOY_ROLE }}
         role-chaining: true
         aws-region: us-east-1
 

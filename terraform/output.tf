@@ -5,3 +5,7 @@ output "cloudFrontDistributionID" {
 output "URL" {
   value = format("s3://%s?region=%s", module.cdn.s3_bucket, data.aws_region.current.name)
 }
+
+output "hostname" {
+  value = module.cdn.aliases[0]
+}

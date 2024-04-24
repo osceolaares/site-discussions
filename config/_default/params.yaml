@@ -5,7 +5,7 @@ hb:
   # css_bundle_name: main # the CSS bundle name.
   full_width: false # when true, the layout takes full width globally.
   header:
-    brand: Osceola County ARES # the brand name, leave it empty to use site's title.
+    brand: Osceola ARES # the brand name, leave it empty to use site's title.
     # logo_bg: '#712cf9' # logo background color, used by logo with transparent background.
     logo_bg: #ffffff
     # see https://hbstack.dev/en/docs/modules/socials/.
@@ -154,9 +154,9 @@ hugopress:
         body-end:
           cacheable: true
         # see layouts/partials/hugopress/modules/hb-custom/hooks/hb-blog-sidebar.html.
-        # hb-blog-sidebar:
-        #   cacheable: true
-        #   weight: 4
+        hb-blog-sidebar:
+          cacheable: true
+          weight: 4
     # change the order of sidebar modules.
     hb-blog-sidebar-taxonomies:
       hooks:

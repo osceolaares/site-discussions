@@ -35,7 +35,7 @@ menu:
 | {{< qrz N4ZIQ >}} | Joe Reilly | <n4ziq@n4ziq.com> | Emergency Coordinator |
 | {{< qrz KJ4PNA >}} | John Chapman | <chiefjchapman@bellsouth.net> | AEC - Recruiting & Training |
 | {{< qrz K9YAP >}} | Randy Fox | <K9YAP@thefoxden.com> | AEC - Technical |
-| {{< qrz N4ZZG >}} | William Burchfield | <wburchfiel@aol.com> | Net Control Manager |
+| {{< qrz N4ZZG >}} | William Burchfield | <N4ZZG@osceolacountyares.org> | Net Control Manager |
 
 ## Osceola ARES
 

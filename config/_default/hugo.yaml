@@ -1,5 +1,5 @@
 baseURL: https://osceola-ares.kq4afy.xyz/
-title: Osceola County ARES
+title: Osceola ARES
 copyright: "Copyright © 2022-{year} Osceola Amateur Radio Emergency Services"
 defaultContentLanguage: en
 defaultContentLanguageInSubdir: false # when true, append the default language code into URL, i.e. /docs -> /en/docs.

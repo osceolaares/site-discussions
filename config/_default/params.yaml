@@ -7,10 +7,10 @@ hb:
   header:
     brand: Osceola ARES # the brand name, leave it empty to use site's title.
     # logo_bg: '#712cf9' # logo background color, used by logo with transparent background.
-    logo_bg: #ffffff
+    logo_bg: '#ffffff'
     # see https://hbstack.dev/en/docs/modules/socials/.
     socials:
-      # github: hbstack
+      github: osceolaares
       # twitter: razonyang
       rss: true
       # mastodon: https://techhub.social/@hbstack
@@ -18,7 +18,7 @@ hb:
     # see https://hbstack.dev/en/docs/modules/socials/.
     socials:
       _color: true # when false, remove the color of social icons.
-      # github: hbstack
+      github: osceolaares
       # twitter: razonyang
       rss: true
       # mastodon: https://techhub.social/@hbstack
@@ -44,7 +44,7 @@ hb:
         company: KG4EOC
         location: Osceola County, FL
         socials:
-          # github: hbstack
+          github: osceolaares
           # mastodon: https://techhub.social/@hbstack
           rss: true
       posts:
@@ -86,12 +86,12 @@ hb:
         - blog
         - news
     # giscus:
-    #   repo: hbstack/theme-cards
+    #   repo: osceolaares/osceola-ares-site
     #   repo_id: R_kgDOK1LmSQ
     #   category_id: DIC_kwDOK1LmSc4CbdiM
   docs:
     # giscus:
-    #   repo: hbstack/theme-cards
+    #   repo: osceolaares/osceola-ares-site
     #   repo_id: R_kgDOK1LmSQ
     #   category_id: DIC_kwDOK1LmSc4CbdiM
     social_share_buttons:
@@ -103,7 +103,7 @@ hb:
   content_panel:
     repo:
       service: github # github or gitlab.
-      repo: jbouse/osceola-ares
+      repo: osceolaares/osceola-ares-site
       branch: main
       # subpath: exampleSite
   gallery:
@@ -130,7 +130,7 @@ pwa:
   manifest:
     background_color: '#712cf9'
     theme_color: '#712cf9'
-    short_name: 'HB Theme'
+    short_name: 'Osceola ARES'
 
 # see https://hugomods.com/search/configurations/.
 search:

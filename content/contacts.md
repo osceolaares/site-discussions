@@ -35,7 +35,7 @@ menu:
 | {{< qrz KG4FZO >}} | Richard Halquist | <KG4ZFO@osceolacountyares.org> | Emergency Coodinator |
 | {{< qrz KJ4PNA >}} | John Chapman | <chiefjchapman@bellsouth.net> | AEC - Recruiting & Training |
 | {{< qrz K9YAP >}} | Randy Fox | <K9YAP@thefoxden.com> | AEC - Technical |
-| {{< qrz N4ZZG >}} | William Burchfield | <N4ZZG@osceolacountyares.org> | Net Control Manager |
+| {{< qrz N4ZZG >}} | William "Bill" Burchfield | <N4ZZG@osceolacountyares.org> | Net Control Manager |
 
 ## Osceola ARES
 
@@ -43,7 +43,7 @@ menu:
 | :------: | ---- | ----- | -------- |
 | {{< qrz KO4POJ >}} | Luis "Lou" Corrales | <KO4POJ@osceolacountyares.org> | President |
 | {{< qrz KG4FZO >}} | Richard Halquist | <KG4ZFO@osceolacountyares.org> | Vice President |
-| {{< qrz N4ZZG >}} | William Burchfield | <N4ZZG@osceolacountyares.org> | Vice President |
+| {{< qrz N4ZZG >}} | William "Bill" Burchfield | <N4ZZG@osceolacountyares.org> | Vice President |
 | {{< qrz KK4OKZ >}} | James Cokos | <jrcokos@gmail.com> | Secretary |
 | {{< qrz KQ4AFY >}} | Jeremy T. Bouse | <KQ4AFY@osceolacountyares.org> | Treasurer |
 | {{< qrz N4ZIQ >}} | Joe Reilly | <n4ziq@n4ziq.com> | Director |

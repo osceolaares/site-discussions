@@ -111,7 +111,7 @@ hb:
     highlight_images_count: 10
     highlight_images_recursive: false
     paginate: 12
-    thumbnail_size: "x320"
+    thumbnail_size: "x640"
   google_fonts:
     families:
       - name: Oswald

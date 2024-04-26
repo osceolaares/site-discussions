@@ -33,4 +33,4 @@ The Osceola Amateur Radio Emergency Service is committed to providing reliable A
 
 Missions may be assigned to this unit in situations of an emergency or natural disaster anywhere within Osceola County or adjacent counties with an Amateur Radio Emergency Service Mutual Assistance Team (ARESMAT) agreement.
 
-Additionally, Osceola ARES may participate in non-emergency events as requested by event organizers, provided the services requested are within the unit's capabilities and in compliance with all Federal Communications Commission (FCC) Part 97 Rules.
+Additionally, Osceola Amateur Radio Emergency Service may participate in non-emergency events as requested by event organizers, provided the services requested are within the unit's capabilities, and in compliance with all Federal Communications Commission (FCC) Part 97 Rules.

@@ -31,7 +31,11 @@ menu:
 
 We have two repeaters for ARES and local use. The repeater site is located between St.Cloud and Kissimmee, near Narcoossee Rd.
 
-## First repeater is analog @ 145.350- with CTCSS 103.5
+## Analog Repeaters
+
+ID|Frequency|Offset|Tone
+-----|-----|-----|-----
+KG4EOC|145.350|DUP-|103.5
 
 An analog ham radio repeater is a type of amateur radio repeater that operates using traditional analog modulation and demodulation techniques. Unlike digital repeaters that use digital voice and data protocols, analog repeaters use analog FM (Frequency Modulation) modulation for voice communications.
 
@@ -46,7 +50,19 @@ Here's how an analog ham radio repeater works:
 
 Analog ham radio repeaters have been an essential part of amateur radio infrastructure for many years. They provide a means for hams to communicate over extended distances without needing expensive high-power radios or antennas. However, with the advent of digital modes like D-STAR, DMR, and others, digital repeaters are becoming more popular, offering enhanced audio quality, data capabilities, and internet linking features.
 
-## Second repeater is D-STAR 444.100+ RF, and on reflector DCS102B
+## Digital Repeaters
+
+ID|Frequency|Offset|Protocol
+-----|-----|-----|-----
+KG4EOC B|444.100|DUP+|D-STAR
+
+### DCS102 Reflector
+
+Module|Name
+-----|-----
+DCS102 B|Hang Out
+DCS102 E|EMCAT
+DCS102 W|Weather Watch
 
 A D-STAR (Digital Smart Technologies for Amateur Radio) repeater is a type of amateur radio repeater that operates using the D-STAR digital voice and data protocol. D-STAR is a digital communication system developed for amateur radio by the Japan Amateur Radio League (JARL) and provides advanced voice, data, and networking capabilities for ham radio operators.
 

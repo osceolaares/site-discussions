@@ -7,12 +7,12 @@ noindex: false
 featured: false
 pinned: false
 # comments: false
+type: news
 series:
-#  - 
+ - News
 categories:
- - minutes
+ - Board
 tags:
- - board
  - election
 images:
 #  - 

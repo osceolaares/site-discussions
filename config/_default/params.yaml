@@ -40,7 +40,7 @@ hb:
       profile:
         # title: Profile title other than site title.
         # description: Profile description other than site description.
-        avatar_size: 100
+        avatar_size: 120
         company: KG4EOC
         location: Osceola County, FL
         socials:

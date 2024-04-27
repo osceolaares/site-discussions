@@ -1,7 +1,7 @@
 ---
 title: "New Board of Directors slate approved"
 date: 2024-03-15T00:00:00-04:00
-draft: true
+draft: false
 description: "The current board met to approve new board of director members."
 noindex: false
 featured: false

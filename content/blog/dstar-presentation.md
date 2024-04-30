@@ -2,7 +2,7 @@
 title: "D-Star Presentation from 2/25/19 Meeting"
 date: 2019-02-25T14:19:00-04:00
 draft: false
-description: "D-Star presentation slide deck from meeting."
+description: "Presentation slide deck from meeting."
 noindex: false
 featured: false
 pinned: false
@@ -10,7 +10,7 @@ pinned: false
 series:
  - Presentation
 categories:
- - D-Star
+ - Meeting
 tags:
  - D-Star
  - Digital 
@@ -26,6 +26,8 @@ authors:
 #         vendor: bs
 #         name: book
 #         color: '#e24d0e'
+aliases:
+- /d-star-presentation-from-2-25-19-meeting
 ---
 
 Here is the PowerPoint presentation on D-Star from the 2/25/19 meeting.

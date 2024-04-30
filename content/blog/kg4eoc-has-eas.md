@@ -25,6 +25,8 @@ authors:
 #         vendor: bs
 #         name: book
 #         color: '#e24d0e'
+aliases:
+- /kg4eoc-has-eas
 ---
 
 ## What is that?

@@ -4,10 +4,10 @@ date: 2024-03-15T00:00:00-04:00
 draft: false
 description: "The current board met to approve new board of director members."
 noindex: false
-featured: false
+featured: true
 pinned: false
-# comments: false
-type: news
+comments: false
+layout: news
 series:
  - News
 categories:

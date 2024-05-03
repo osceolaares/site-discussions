@@ -4,9 +4,10 @@ date: 2013-05-21T23:05:00-04:00
 draft: false
 description: "KG4EOC has EAS!"
 noindex: false
-featured: false
+featured: true
 pinned: false
-# comments: false
+comments: false
+layout: news
 series:
  - News
 categories:

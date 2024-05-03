@@ -59,9 +59,9 @@ hb:
         count: true # whether to show the number of posts associated to the item.
         limit: 10 # the maximum number of the item.
         style: pills # pills, tabs or underline.
-        separate: false # whether to separate into mutliple sections.
+        separate: false # whether to separate into multiple sections.
         authors:
-          disable: false # whether to disable this taxonomy.
+          disable: true # whether to disable this taxonomy.
           weight: 1 # the weight of this taxonomy, lower gets higher priority.
           count: false # override the global count setting.
           limit: 5 # override the global limit setting.
@@ -85,7 +85,7 @@ hb:
       featured_posts: 5 # the number of the featured posts, 0 means disabled.
       pinned_posts_position: "list"
       main_sections: # leave it empty to include all regular pages.
-        - docs
+        # - docs
         - blog
         - news
     giscus:

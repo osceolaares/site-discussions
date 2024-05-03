@@ -6,4 +6,5 @@ variable "domain_name" {
 variable "host_name" {
   type        = string
   description = "The host name for the site"
+  default     = null
 }

@@ -5,7 +5,7 @@ module "cdn" {
   namespace                   = "oares"
   stage                       = "use1"
   name                        = "cdn"
-  aliases                     = [format("%s.%s", var.host_name, var.domain_name)]
+  aliases                     = [local.hostname]
   dns_alias_enabled           = true
   website_enabled             = true
   s3_website_password_enabled = true
@@ -25,4 +25,8 @@ module "cdn" {
   ]
   parent_zone_id      = data.aws_route53_zone.this.zone_id
   acm_certificate_arn = data.aws_acm_certificate.this.arn
+}
+
+locals {
+  hostname = join(".", compact([var.host_name, var.domain_name]))
 }

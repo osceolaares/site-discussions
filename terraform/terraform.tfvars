@@ -1,3 +1,3 @@
-domain_name = "kq4afy.xyz"
+domain_name = "osceolacountyares.org"
 
-host_name = "osceola-ares"
+host_name = "staging"

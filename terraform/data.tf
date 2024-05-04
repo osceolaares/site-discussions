@@ -3,7 +3,7 @@ data "aws_route53_zone" "this" {
 }
 
 data "aws_acm_certificate" "this" {
-  domain      = local.hostname
+  domain      = var.domain_name
   types       = ["AMAZON_ISSUED"]
   statuses    = ["ISSUED"]
   most_recent = true

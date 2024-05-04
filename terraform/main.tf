@@ -5,7 +5,7 @@ module "cdn" {
   namespace                   = "oares"
   stage                       = "use1"
   name                        = "cdn"
-  aliases                     = [local.hostname, join(".", ["_mta-sts", var.domain_name])]
+  aliases                     = [local.hostname, join(".", ["mta-sts", var.domain_name])]
   dns_alias_enabled           = true
   website_enabled             = true
   s3_website_password_enabled = true

@@ -51,8 +51,8 @@ hb:
           # mastodon: https://techhub.social/@hbstack
           rss: true
       posts:
-        recent_count: 5 # the number of recent posts.
-        featured_count: 5 # the number of featured posts.
+        recent_count: 0 # the number of recent posts.
+        featured_count: 0 # the number of featured posts.
         style: pills # pills, tabs or underline.
         list_style: slide # slide or vertical.
       taxonomies:
@@ -61,7 +61,7 @@ hb:
         style: pills # pills, tabs or underline.
         separate: false # whether to separate into multiple sections.
         authors:
-          disable: true # whether to disable this taxonomy.
+          disable: false # whether to disable this taxonomy.
           weight: 1 # the weight of this taxonomy, lower gets higher priority.
           count: false # override the global count setting.
           limit: 5 # override the global limit setting.

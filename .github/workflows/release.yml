@@ -76,10 +76,13 @@ jobs:
 
     env:
       HUGO_ENV: production
+      HUGO_CACHEDIR: /tmp/hugo_cache
     
     steps:
     - name: Checkout
       uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
 
     - name: Setup node
       uses: actions/setup-node@v4
@@ -91,15 +94,15 @@ jobs:
     - name: Setup Hugo
       uses: peaceiris/actions-hugo@v3
       with:
-        hugo-version: '0.124.1'
+        hugo-version: '0.136.5'
         extended: true
 
-    # - uses: actions/cache@v4
-    #   with:
-    #     path: ~/.cache/hugo_cache    # <-- with hugo version v0.116.0 and above
-    #     key: ${{ runner.os }}-hugomod-${{ hashFiles('**/go.sum') }}
-    #     restore-keys: |
-    #       ${{ runner.os }}-hugomod-
+    - uses: actions/cache@v4
+      with:
+        path: ${{ env.HUGO_CACHEDIR }}
+        key: ${{ runner.os }}-hugomod-${{ hashFiles('**/go.sum') }}
+        restore-keys: |
+          ${{ runner.os }}-hugomod-
       
     - name: Hugo Build
       run: hugo --gc --enableGitInfo --minify --baseURL https://${{ needs.deploy-infra.outputs.baseurl }}/

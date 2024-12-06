@@ -9,7 +9,7 @@ terraform {
     profile        = ""
     encrypt        = "true"
     assume_role = {
-      role_arn       = "arn:aws:iam::465691465286:role/GitHubActionsExecution"
+      role_arn = "arn:aws:iam::465691465286:role/GitHubActionsExecution"
     }
   }
 }

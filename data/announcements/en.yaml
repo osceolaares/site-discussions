@@ -1,5 +1,5 @@
 new-site:
-  title: We are expediently working on a new site update!
+  title: We are expediently working on the new site update!
   weight: 10
 
 next-meeting:
@@ -8,6 +8,6 @@ next-meeting:
   weight: 5
 
 hamcation:
-  title: Consider volunteering for Orlando HamCation
+  title: Consider volunteering for Orlando HamCation 2025
   url: https://www.hamcation.com/hamcation-volunteer
   weigh: 15

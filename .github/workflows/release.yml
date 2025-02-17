@@ -56,17 +56,29 @@ jobs:
     
     - name: Terraform Plan
       id: plan
-      run: terraform plan -no-color
+      run: terraform plan -out .planfile
+
+    - name: Post PR comment
+      if: github.event_name == 'pull_request'
+      uses: borchero/terraform-plan-comment@v2
+      with:
+        token: ${{ github.token }}
+        planfile: .planfile
+        working-directory: terraform/
+
+    - name: Terraform Plan Status
+      if: steps.plan.outcome == 'failure'
+      run: exit 1
 
     - name: Terraform Apply
       if: github.ref == 'refs/heads/main' && github.event_name == 'push'
-      run: terraform apply -no-color -auto-approve
+      run: terraform apply -no-color -auto-approve .planfile
 
     - name: Output Terraform values
       id: terraform
       run: |
         echo "DID=$(terraform output -raw cloudFrontDistributionID)" >> "$GITHUB_OUTPUT"
-        echo "URL=$(terraform output -raw URL)" >> "$GITHUB_OUTPUT"
+        echo "URL=$(terraform output -raw s3Bucket)" >> "$GITHUB_OUTPUT"
         echo "BASE=$(terraform output -raw hostname)" >> "$GITHUB_OUTPUT"
 
   build-hugo:
@@ -89,13 +101,16 @@ jobs:
       with:
         node-version: 'lts/*'
 
-    - run: npm ci
+    - name: Setup Dart Sass
+      run: sudo snap install dart-sass && sudo snap alias dart-sass sass
 
     - name: Setup Hugo
       uses: peaceiris/actions-hugo@v3
       with:
-        hugo-version: '0.136.5'
+        hugo-version: 'latest'
         extended: true
+
+    - run: npm ci
 
     - uses: actions/cache@v4
       with:
@@ -105,8 +120,8 @@ jobs:
           ${{ runner.os }}-hugomod-
       
     - name: Hugo Build
-      run: hugo --gc --enableGitInfo --minify --baseURL https://${{ needs.deploy-infra.outputs.baseurl }}/
-
+      run: hugo build --gc --cleanDestinationDir --enableGitInfo --minify --baseURL https://${{ needs.deploy-infra.outputs.baseurl }}/
+  
     - name: Configure AWS credentials
       uses: aws-actions/configure-aws-credentials@v4
       with:
@@ -120,15 +135,15 @@ jobs:
         role-chaining: true
         aws-region: us-east-1
 
-    - name: Update Hugo Deployment
-      run: |
-        sed -i "s@CLOUDFRONT_DISTRIBUTION_ID@${{ needs.deploy-infra.outputs.distribution }}@g" config/production/deployment.yaml
-        sed -i "s@S3_BUCKET_URL@${{ needs.deploy-infra.outputs.bucket }}@g" config/production/deployment.yaml
-
-    - name: Hugo Deploy (dry-run)
-      if: github.event_name == 'pull_request'
-      run: hugo deploy --dryRun --target AWS
-
     - name: Hugo Deploy
       if: github.ref == 'refs/heads/main' && github.event_name == 'push'
-      run: hugo deploy --maxDeletes -1 --target AWS --logLevel info
+      uses: reggionick/s3-deploy@v4
+      with:
+        folder: public
+        dist-id: ${{ needs.deploy-infra.outputs.distribution }}
+        bucket: ${{ needs.deploy-infra.outputs.bucket }}
+        bucket-region: us-east-1
+        delete-removed: true
+        cache: 3600
+        private: true
+        files-to-include: '{.*/**,**}'

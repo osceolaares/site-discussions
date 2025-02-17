@@ -1,4 +1,4 @@
-description: Osceola Amateur Radio Emergency Service
+# description: Osceola Amateur Radio Emergency Service
 
 hb:
   # js_bundle_name: main # the JS bundle name.
@@ -14,7 +14,7 @@ hb:
     # see https://hbstack.dev/en/docs/modules/socials/.
     socials:
       github: osceolaares
-      # twitter: razonyang
+      bluesky: osceolacountyares.org
       rss: true
       # mastodon: https://techhub.social/@hbstack
   footer:
@@ -22,7 +22,7 @@ hb:
     socials:
       _color: true # when false, remove the color of social icons.
       github: osceolaares
-      # twitter: razonyang
+      bluesky: osceolacountyares.org
       rss: true
       # mastodon: https://techhub.social/@hbstack
   blog:
@@ -33,6 +33,7 @@ hb:
     social_share_buttons:
       alignment: center
       media:
+        - bluesky
         - twitter
         - facebook
         - linkedin
@@ -48,6 +49,7 @@ hb:
         location: Osceola County, FL
         socials:
           github: osceolaares
+          bluesky: osceolacountyares.org
           # mastodon: https://techhub.social/@hbstack
           rss: true
       posts:
@@ -101,6 +103,7 @@ hb:
     social_share_buttons:
       alignment: center
       media:
+        - bluesky
         - twitter
         - facebook
         - linkedin

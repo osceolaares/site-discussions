@@ -6,6 +6,7 @@ module "cdn" {
   stage                       = "use1"
   name                        = "cdn"
   aliases                     = [local.hostname, join(".", ["mta-sts", var.domain_name])]
+  external_aliases            = var.aliases
   dns_alias_enabled           = true
   website_enabled             = true
   s3_website_password_enabled = true

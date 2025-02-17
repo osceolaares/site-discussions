@@ -12,10 +12,20 @@ module "website" {
   source  = "cloudposse/s3-bucket/aws"
   version = "4.10.0"
 
-  bucket_name         = aws_route53_zone.this.name
-  s3_object_ownership = "BucketOwnerEnforced"
-  versioning_enabled  = false
-  context             = module.this.context
+  bucket_name                  = aws_route53_zone.this.name
+  s3_object_ownership          = "BucketOwnerEnforced"
+  allow_ssl_requests_only      = true
+  allow_encrypted_uploads_only = true
+  versioning_enabled           = false
+  privileged_principal_actions = [
+    "s3:GetObject"
+  ]
+  privileged_principal_arns = [
+    {
+      "*" = [""]
+    }
+  ]
+  context = module.this.context
   website_configuration = [
     {
       index_document = "index.html"

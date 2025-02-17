@@ -2,19 +2,20 @@ module "cdn" {
   source  = "cloudposse/cloudfront-cdn/aws"
   version = "1.2.0"
 
-  name                = "cdn"
-  comment             = var.comment
-  origin_domain_name  = module.website.bucket_website_endpoint
-  aliases             = [local.hostname, local.mta_sts]
-  dns_aliases_enabled = true
-  compress            = true
-  price_class         = "PriceClass_All"
-  default_ttl         = 86400
-  min_ttl             = 3600
-  max_ttl             = 2592000
-  parent_zone_id      = aws_route53_zone.this.id
-  acm_certificate_arn = module.acm_certificate.arn
-  context             = module.this.context
+  name                   = "cdn"
+  comment                = var.comment
+  origin_domain_name     = module.website.bucket_website_endpoint
+  aliases                = [local.hostname, local.mta_sts]
+  dns_aliases_enabled    = true
+  compress               = true
+  price_class            = "PriceClass_All"
+  default_ttl            = 86400
+  min_ttl                = 3600
+  max_ttl                = 2592000
+  origin_protocol_policy = "https-only"
+  parent_zone_id         = aws_route53_zone.this.id
+  acm_certificate_arn    = module.acm_certificate.arn
+  context                = module.this.context
   forward_headers = [
     "Access-Control-Request-Headers",
     "Access-Control-Request-Method",

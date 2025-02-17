@@ -3,11 +3,12 @@ module "cdn" {
   version = "0.96.0"
 
   name                        = "cdn"
-  comment                = var.comment
+  comment                     = var.comment
   origin_bucket               = module.website.bucket_id
   aliases                     = [local.hostname, local.mta_sts]
   external_aliases            = var.aliases
   dns_alias_enabled           = true
+  dns_allow_overwrite         = true
   website_enabled             = true
   s3_website_password_enabled = true
   allow_ssl_requests_only     = false
@@ -16,9 +17,9 @@ module "cdn" {
   min_ttl                     = 3600
   max_ttl                     = 2592000
   minimum_protocol_version    = "TLSv1.2_2021"
-  parent_zone_id         = aws_route53_zone.this.id
-  acm_certificate_arn    = module.acm_certificate.arn
-  context                = module.this.context
+  parent_zone_id              = aws_route53_zone.this.id
+  acm_certificate_arn         = module.acm_certificate.arn
+  context                     = module.this.context
   custom_error_response = [
     {
       error_caching_min_ttl = null

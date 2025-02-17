@@ -14,18 +14,9 @@ module "website" {
 
   bucket_name                  = aws_route53_zone.this.name
   s3_object_ownership          = "BucketOwnerEnforced"
-  allow_ssl_requests_only      = true
   block_public_policy          = false
   restrict_public_buckets      = false
   versioning_enabled           = false
-  privileged_principal_actions = [
-    "s3:GetObject"
-  ]
-  privileged_principal_arns = [
-    {
-      "*" = [""]
-    }
-  ]
   context = module.this.context
   website_configuration = [
     {
@@ -34,17 +25,6 @@ module "website" {
       routing_rules  = null
     }
   ]
-}
-
-module "acm_certificate" {
-  source  = "cloudposse/acm-request-certificate/aws"
-  version = "0.18.0"
-
-  domain_name                       = aws_route53_zone.this.name
-  zone_id                           = aws_route53_zone.this.id
-  process_domain_validation_options = true
-  ttl                               = "300"
-  subject_alternative_names         = [join(".", ["*", aws_route53_zone.this.name])]
 }
 
 locals {

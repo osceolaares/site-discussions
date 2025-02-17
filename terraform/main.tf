@@ -3,7 +3,8 @@ module "cdn" {
   version = "1.2.0"
 
   name                = "cdn"
-  origin_domain_name  = module.website.bucket_website_domain
+  comment             = var.comment
+  origin_domain_name  = module.website.bucket_website_endpoint
   aliases             = [local.hostname, local.mta_sts]
   dns_aliases_enabled = true
   compress            = true

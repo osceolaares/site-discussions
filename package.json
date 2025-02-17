@@ -1,25 +1,21 @@
 {
-  "name": "hb-theme-cards",
-  "description": "The cards theme of [HB Framework](https://hbstack.dev/).",
+  "name": "osceola-ares-site",
+  "description": "Osceola County Amateur Radio Emergency Service website",
   "scripts": {
-    "dev": "hugo server --gc -D",
-    "prod": "hugo server --gc --disableFastRender --renderToDisk --minify -e production -p 1314"
+    "dev": "hugo server --gc --enableGitInfo -DF",
+    "prod": "hugo server --gc --disableFastRender --enableGitInfo --minify -e production -p 1314"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hbstack/theme-cards.git"
+    "url": "git+https://github.com/osceolaares/osceola-ares-site.git"
   },
-  "author": "Razon Yang <razonyang@gmail.com>",
+  "author": "Jeremy T. Bouse <Jeremy.Bouse@UnderGrid.net>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/hbstack/theme-cards/issues"
+    "url": "https://github.com/osceolaares/osceola-ares-site/issues"
   },
-  "homepage": "https://github.com/hbstack/theme-cards#readme",
-  "devDependencies": {
-    "@fullhuman/postcss-purgecss": "^5.0.0",
-    "autoprefixer": "^10.4.14",
-    "decap-server": "^3.0.1",
-    "postcss-cli": "^11.0.0",
-    "rtlcss": "^4.0.0"
+  "homepage": "https://github.com/osceolaares/osceola-ares-site",
+  "dependencies": {
+    "@hbstack/node-packages": "^0.1.5"
   }
 }

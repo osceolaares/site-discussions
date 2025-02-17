@@ -1,4 +1,4 @@
-module github.com/jbouse/osceola-ares
+module github.com/osceolaares/osceola-ares-site
 
 go 1.21
 

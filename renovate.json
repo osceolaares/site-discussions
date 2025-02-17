@@ -1,0 +1,30 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:recommended",
+    ":gitSignOff"
+  ],
+  "minimumReleaseAge": "3 days",
+  "platformAutomerge": true,
+  "packageRules": [
+    {
+      "matchManagers": [
+        "gomod",
+        "github-actions",
+        "npm",
+        "terraform"
+      ],
+      "matchDepTypes": [
+        "indirect"
+      ],
+      "matchUpdateTypes": [
+        "minor",
+        "patch",
+        "pin",
+        "digest"
+      ],
+      "automerge": true,
+      "enabled": true
+    }
+  ]
+}

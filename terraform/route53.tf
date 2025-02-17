@@ -17,6 +17,7 @@ module "website" {
   allow_ssl_requests_only      = true
   allow_encrypted_uploads_only = true
   block_public_policy          = false
+  restrict_public_buckets      = false
   versioning_enabled           = false
   privileged_principal_actions = [
     "s3:GetObject"

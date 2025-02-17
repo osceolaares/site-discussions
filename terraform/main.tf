@@ -1,21 +1,24 @@
 module "cdn" {
-  source  = "cloudposse/cloudfront-s3-cdn/aws"
-  version = "0.96.0"
+  source  = "cloudposse/cloudfront-cdn/aws"
+  version = "1.2.0"
 
-  namespace                   = "oares"
-  stage                       = "use1"
-  name                        = "cdn"
-  aliases                     = [local.hostname, join(".", ["mta-sts", var.domain_name])]
-  external_aliases            = var.aliases
-  dns_alias_enabled           = true
-  website_enabled             = true
-  s3_website_password_enabled = true
-  allow_ssl_requests_only     = false
-  price_class                 = "PriceClass_All"
-  default_ttl                 = 86400
-  min_ttl                     = 3600
-  max_ttl                     = 2592000
-  minimum_protocol_version    = "TLSv1.2_2021"
+  name                = "cdn"
+  origin_domain_name  = module.website.bucket_website_domain
+  aliases             = [local.hostname, local.mta_sts]
+  dns_aliases_enabled = true
+  compress            = true
+  price_class         = "PriceClass_All"
+  default_ttl         = 86400
+  min_ttl             = 3600
+  max_ttl             = 2592000
+  parent_zone_id      = aws_route53_zone.this.id
+  acm_certificate_arn = module.acm_certificate.arn
+  context             = module.this.context
+  forward_headers = [
+    "Access-Control-Request-Headers",
+    "Access-Control-Request-Method",
+    "Origin",
+  ]
   custom_error_response = [
     {
       error_caching_min_ttl = null
@@ -24,10 +27,9 @@ module "cdn" {
       response_page_path    = "/404.html"
     }
   ]
-  parent_zone_id      = data.aws_route53_zone.this.zone_id
-  acm_certificate_arn = data.aws_acm_certificate.this.arn
 }
 
 locals {
-  hostname = join(".", compact([var.host_name, var.domain_name]))
+  hostname = join(".", compact([var.host_name, aws_route53_zone.this.name]))
+  mta_sts  = join(".", ["mta-sts", aws_route53_zone.this.name])
 }

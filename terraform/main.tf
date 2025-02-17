@@ -1,6 +1,6 @@
 module "cdn" {
   source  = "cloudposse/cloudfront-s3-cdn/aws"
-  version = "0.94.0"
+  version = "0.96.0"
 
   namespace                   = "oares"
   stage                       = "use1"

@@ -16,7 +16,6 @@ hb:
       github: osceolaares
       bluesky: osceolacountyares.org
       rss: true
-      # mastodon: https://techhub.social/@hbstack
   footer:
     # see https://hbstack.dev/en/docs/modules/socials/.
     socials:
@@ -24,7 +23,6 @@ hb:
       github: osceolaares
       bluesky: osceolacountyares.org
       rss: true
-      # mastodon: https://techhub.social/@hbstack
   blog:
     list_cols_md: 2
     list_cols_lg: 3
@@ -50,7 +48,6 @@ hb:
         socials:
           github: osceolaares
           bluesky: osceolacountyares.org
-          # mastodon: https://techhub.social/@hbstack
           rss: true
       posts:
         recent_count: 0 # the number of recent posts.
@@ -109,10 +106,9 @@ hb:
         - linkedin
   content_panel:
     repo:
-      service: github # github or gitlab.
+      service: github
       repo: osceolaares/osceola-ares-site
       branch: main
-      # subpath: exampleSite
   gallery:
     date_sort_order: asc
     highlight_images_count: 10

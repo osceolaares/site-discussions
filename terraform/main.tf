@@ -1,26 +1,24 @@
 module "cdn" {
-  source  = "cloudposse/cloudfront-cdn/aws"
-  version = "1.2.0"
+  source  = "cloudposse/cloudfront-s3-cdn/aws"
+  version = "0.96.0"
 
-  name                   = "cdn"
+  name                        = "cdn"
   comment                = var.comment
-  origin_domain_name     = module.website.bucket_website_endpoint
-  aliases                = [local.hostname, local.mta_sts]
-  dns_aliases_enabled    = true
-  compress               = true
-  price_class            = "PriceClass_All"
-  default_ttl            = 86400
-  min_ttl                = 3600
-  max_ttl                = 2592000
-  origin_protocol_policy = "https-only"
+  origin_bucket               = module.website.bucket_id
+  aliases                     = [local.hostname, local.mta_sts]
+  external_aliases            = var.aliases
+  dns_alias_enabled           = true
+  website_enabled             = true
+  s3_website_password_enabled = true
+  allow_ssl_requests_only     = false
+  price_class                 = "PriceClass_All"
+  default_ttl                 = 86400
+  min_ttl                     = 3600
+  max_ttl                     = 2592000
+  minimum_protocol_version    = "TLSv1.2_2021"
   parent_zone_id         = aws_route53_zone.this.id
   acm_certificate_arn    = module.acm_certificate.arn
   context                = module.this.context
-  forward_headers = [
-    "Access-Control-Request-Headers",
-    "Access-Control-Request-Method",
-    "Origin",
-  ]
   custom_error_response = [
     {
       error_caching_min_ttl = null
@@ -29,6 +27,17 @@ module "cdn" {
       response_page_path    = "/404.html"
     }
   ]
+}
+
+module "acm_certificate" {
+  source  = "cloudposse/acm-request-certificate/aws"
+  version = "0.18.0"
+
+  domain_name                       = aws_route53_zone.this.name
+  zone_id                           = aws_route53_zone.this.id
+  process_domain_validation_options = true
+  ttl                               = "300"
+  subject_alternative_names         = [join(".", ["*", aws_route53_zone.this.name])]
 }
 
 locals {

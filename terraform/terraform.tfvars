@@ -10,4 +10,4 @@ mx_records = [
   "1 SMTP.GOOGLE.COM",
 ]
 
-# host_name = "staging"
+host_name = "staging"

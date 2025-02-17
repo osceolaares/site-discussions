@@ -6,6 +6,13 @@ main:
   #     icon:
   #       vendor: fas
   #       name: blog
+  - identifier: whatis
+    name: What is...
+    weight: 10
+    params:
+      icon:
+        vendor: far
+        name: circle-question
 
   - identifier: sfl
     name: ARRL South Florida Section

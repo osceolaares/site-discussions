@@ -21,7 +21,7 @@ authors:
 menu:
   main:
     identifier: about
-    weight: 90
+    weight: 20
     params:
       icon:
         vendor: fas

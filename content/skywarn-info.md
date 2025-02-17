@@ -21,6 +21,7 @@ menu:
   main:
     identifier: skywarn
     weight: 50
+    parent: nets
     params:
       icon:
         vendor: fas

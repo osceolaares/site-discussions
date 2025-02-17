@@ -20,6 +20,7 @@ authors:
 menu:
   main:
     weight: 10
+    parent: whatis
     params:
       icon:
         vendor: far

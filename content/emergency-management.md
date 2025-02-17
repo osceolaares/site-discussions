@@ -20,6 +20,7 @@ authors:
 menu:
   main:
     identifier: em
+    parent: whatis
     weight: 30
     params:
       icon:

@@ -33,7 +33,6 @@ menu:
 
 **Organization**|**Frequency**|**Tone**|**Day**|**Time**
 -----|-----|-----|-----|-----
-Osceola ARES|145.350|103.5|Tue|1900
 Osceola Mercury 1|145.350|103.5|Wed|1900
 Osceola Repeater Assoc.|146.790|151.4|Tue|1930
 Orange EART|146.730|103.5|Thur|1900
@@ -48,7 +47,6 @@ Indian River ARES|145.370| |Wed|1930
 
 **Organization**|**Frequency**|**Tone**|**Day**|**Time**
 -----|-----|-----|-----|-----
-Osceola ARES|444.100|103.5|Tue|1900
 Osceola Mercury 1|444.100|103.5|Wed|1900
 Orange County ARES|443.050||Thur|1900
 Polk ARES|444.950|127.3|Tue|1930

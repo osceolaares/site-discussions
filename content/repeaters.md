@@ -29,7 +29,7 @@ menu:
 #         color: '#e24d0e'
 ---
 
-We have two repeaters for ARES and local use. The repeater site is located between St.Cloud and Kissimmee, near Narcoossee Rd.
+We have two repeaters for ARES and local use. The repeater site is located between St.Cloud and Kissimmee.
 
 ## Analog Repeaters
 

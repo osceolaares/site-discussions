@@ -9,6 +9,6 @@ output "s3Bucket" {
 }
 
 output "hostname" {
-  value       = module.cdn.cf_domain_name
+  value       = module.cdn.aliases[0]
   description = "Base hostname used for Cloudfront Distibution"
 }

@@ -3,7 +3,7 @@
 hb:
   # js_bundle_name: main # the JS bundle name.
   # css_bundle_name: main # the CSS bundle name.
-  full_width: false # when true, the layout takes full width globally.
+  full_width: true # when true, the layout takes full width globally.
   header:
     brand: Osceola ARES # the brand name, leave it empty to use site's title.
     git_org:
@@ -19,7 +19,7 @@ hb:
   footer:
     # see https://hbstack.dev/en/docs/modules/socials/.
     socials:
-      _color: true # when false, remove the color of social icons.
+      _color: false # when false, remove the color of social icons.
       github: osceolaares
       bluesky: osceolacountyares.org
       rss: true
@@ -36,7 +36,7 @@ hb:
         - facebook
         - linkedin
     sidebar:
-      sticky: true # set it to false to not stick the sidebar.
+      sticky: false # set it to false to not stick the sidebar.
       width: .35 # the width of sidebar.
       position: start # the sidebar position: start (left) or end (right).
       profile:
@@ -46,6 +46,7 @@ hb:
         company: KG4EOC
         location: Osceola County, FL
         socials:
+          _color: false # when false, remove the color of social icons.
           github: osceolaares
           bluesky: osceolacountyares.org
           rss: true
@@ -60,21 +61,21 @@ hb:
         style: pills # pills, tabs or underline.
         separate: false # whether to separate into multiple sections.
         authors:
-          disable: false # whether to disable this taxonomy.
+          disable: true # whether to disable this taxonomy.
           weight: 1 # the weight of this taxonomy, lower gets higher priority.
           count: false # override the global count setting.
           limit: 5 # override the global limit setting.
-        categories:
-          disable: false
-          weight: 3
         series:
-          disable: false
+          disable: true
           weight: 2
         tags:
           disable: false
-          weight: 4
+          weight: 3
           limit: 20
           # title: Popular Tags # override the title.
+        categories:
+          disable: false
+          weight: 4
     paginate: 12 # paginate.
     post_thumbnail_placeholder: Osceola ARES # the text of thumbnail placeholder, default to site title.
     post_thumbnail_default: images/logo.png

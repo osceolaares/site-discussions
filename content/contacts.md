@@ -33,8 +33,6 @@ menu:
 | Callsign | Name | Email | Position |
 | :------: | ---- | ----- | -------- |
 | {{< qrz KG4FZO >}} | Richard Halquist | <KG4ZFO@osceolacountyares.org> | Emergency Coodinator |
-<!-- | {{< qrz KJ4PNA >}} | John Chapman | <KJ4PNA@osceolacountyares.org> | AEC - Recruiting & Training |
-| {{< qrz K9YAP >}} | Randy Fox | <K9YAP@thefoxden.com> | AEC - Technical | -->
 | {{< qrz N4ZZG >}} | William Burchfield | <N4ZZG@osceolacountyares.org> | Net Control Manager |
 
 ## Osceola ARES

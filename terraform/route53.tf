@@ -12,12 +12,12 @@ module "website" {
   source  = "cloudposse/s3-bucket/aws"
   version = "4.10.0"
 
-  bucket_name                  = aws_route53_zone.this.name
-  s3_object_ownership          = "BucketOwnerEnforced"
-  block_public_policy          = false
-  restrict_public_buckets      = false
-  versioning_enabled           = false
-  context = module.this.context
+  bucket_name             = aws_route53_zone.this.name
+  s3_object_ownership     = "BucketOwnerEnforced"
+  block_public_policy     = false
+  restrict_public_buckets = false
+  versioning_enabled      = false
+  context                 = module.this.context
   website_configuration = [
     {
       index_document = "index.html"

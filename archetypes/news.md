@@ -4,12 +4,12 @@ date: {{ .Date }}
 draft: true
 description: "{{ replace .Name "-" " " | title }}"
 noindex: false
-featured: true
+featured: false
 pinned: false
 comments: false
 layout: news
 series:
-#  - 
+ - News
 categories:
 #  - 
 tags:

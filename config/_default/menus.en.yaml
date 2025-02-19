@@ -23,7 +23,6 @@ main:
       icon:
         vendor: fas
         name: arrow-up-right-from-square
-        # name: people-group
 
   - identifier: ocw
     name: Osceola County Weather
@@ -34,4 +33,19 @@ main:
       icon:
         vendor: fas
         name: arrow-up-right-from-square
-        # name: cloud-sun
+
+  - identifier: dues
+    name: Pay dues
+    weight: 100
+    url: https://www.paypal.com/ncp/payment/EEN58Z96DDWAA
+    params:
+      icon:
+        name: paypal
+
+  - identifier: donate
+    name: Donate
+    weight: 105
+    url: https://www.paypal.com/donate/?hosted_button_id=G4VFG9VPEL3YA
+    params:
+      icon:
+        name: paypal

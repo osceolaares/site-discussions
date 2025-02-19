@@ -20,7 +20,7 @@ authors:
 menu:
   main:
     identifier: links
-    weight: 100
+    weight: 60
     params:
       icon:
         vendor: fas
